@@ -157,24 +157,97 @@ ul li {
 } */
 
 .contain {
-  max-width: 500px;
+  max-width: none !important;
   margin: 0 auto;
   padding: 20px;
   background: white;
-  box-shadow: #ffffff;
+  /* box-shadow: #ffffff; */
   border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .plotBloodPressureChart {
   width: 100% !important;
-  height: 235px !important;
+  height: 300px !important;
 }
 
-.chart-container {
-  margin-top: 20px;
-  width: 100%;
-  max-width: 600px;
-  margin: auto;
+.plot {
+  height: 300px !important;
+  background-color: #f4f0fe;
+}
+
+.graphContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.graphContent canvas {
+  flex: 2;
+  max-width: 80%;
+}
+
+.graphText {
+  flex: 1;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  padding-left: 10px;
+  padding-bottom: 150px;
+}
+
+.circle {
+  background-color: #8c6fe6 !important;
+}
+
+.circle1 {
+  background-color: #e66fd2 !important;
+}
+
+.graphContent {
+  position: relative;
+}
+
+.HardDiv {
+  white-space: nowrap !important;
+}
+
+.graphContent h6 {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  left: 10%;
+  color: #072635 !important;
+  transform: translateX(-50%);
+  font-weight: bold;
+  color: white; /* Adjust to match the purple background */
+  z-index: 10; /* Ensures it appears above the graph */
+}
+
+.higher {
+  font-size: xx-small !important;
+  color: #072635;
+  font-weight: 100 !important;
+}
+
+.highe {
+  font-size: xx-small !important;
+  color: #072635;
+}
+
+li {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  line-height: 1;
+}
+
+.high {
+  font-size: 20px !important;
+  color: #072635;
+}
+
+.text {
+  white-space: nowrap;
 }
 
 .patients-header {

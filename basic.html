@@ -67,21 +67,56 @@
     <!-- HERO SECTION STARTS -->
     <section class="mt-4">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row align-items-start">
           <!-- Patients List -->
-          <div class="col-md-3 col-lg-3 col-sm-6">
+          <div class="col-md-3 col-lg-3 col-sm-12">
             <div class="contain">
               <div class="d-flex align-items-center justify-content-between">
-                <h2 class="fw-bold">Patients</h2>
+                <h3 class="fw-bold">Patients</h3>
                 <img src="images/search.svg" alt="Search" />
               </div>
-              <ul class="patient-card" id="patientList"></ul>
+              <ul id="patientList"></ul>
             </div>
           </div>
 
           <!-- Blood Pressure Chart -->
-          <div class="col-md-6 col-sm-12 row-cols-lg-6">
-            <canvas id="plotBloodPressureChart"></canvas>
+          <div class="col-md-6 col-sm-12 col-lg-6 contain">
+            <h3 class="fw-bold">Diagnosis History</h3>
+            <div class="graphContent plot mt-4">
+              <h6
+                class="d-flex align-items-center justify-content-between ms-4 mb-0 mx-4 ps-5">
+                Blood Pressure
+                <span class="higher ms-3 ms-4">
+                  Last six months
+                  <img src="images/arrowdownsvg.svg" class="ms-2" />
+                </span>
+              </h6>
+              <canvas id="plotBloodPressureChart" class="mt-5"></canvas>
+              <ul class="graphText mt-5">
+                <div
+                  class="rounded-circle circle1 d-flex align-items-center mt-5 mb-1"
+                  style="width: 10px; height: 10px">
+                  <li class="highe ms-2 mb-1">Systolic</li>
+                </div>
+                <li class="high mb-1">160</li>
+                <li class="navbar1 higher text mb-1">
+                  <img src="images/ArrowUp.svg" />
+                  Higher than Average
+                </li>
+                <hr class="border border-dark w-100 mx-auto mb-1" />
+                <div class="d-flex align-items-center mb-1 ms-2">
+                  <div
+                    class="rounded-circle circle mb-1"
+                    style="width: 10px; height: 10px"></div>
+                  <li class="highe mb-1">Diastolic</li>
+                </div>
+                <li class="high mb-1 ms-2">78</li>
+                <li class="navbar1 higher text mb-1 ms-2">
+                  <img src="images/ArrowDownthick.svg" />
+                  Higher than Average
+                </li>
+              </ul>
+            </div>
           </div>
 
           <!-- Patient Details -->
@@ -127,6 +162,62 @@
             gender: "Female",
             age: 28,
             image: "images/jessica.png",
+          },
+          {
+            id: 5,
+            name: "Samantha Johnson",
+            gender: "Female",
+            age: 56,
+            image: "images/samantha.png",
+          },
+          {
+            id: 6,
+            name: "Ashey Martinez",
+            gender: "Female",
+            age: 54,
+            image: "images/jessica.png",
+          },
+          {
+            id: 7,
+            name: "Olivia Brown",
+            gender: "Female",
+            age: 32,
+            image: "images/olivia.png",
+          },
+          {
+            id: 8,
+            name: "Tyler Davis",
+            gender: "Male",
+            age: 19,
+            image: "images/tyler.png",
+          },
+          {
+            id: 9,
+            name: "Kelvin Anderson",
+            gender: "Male",
+            age: 30,
+            image: "images/kelvin.png",
+          },
+          {
+            id: 10,
+            name: "Dylan Thompson",
+            gender: "Male",
+            age: 36,
+            image: "images/dylan.png",
+          },
+          {
+            id: 11,
+            name: "Nathan Evans",
+            gender: "Male",
+            age: 56,
+            image: "images/nathan.png",
+          },
+          {
+            id: 12,
+            name: "Mike Nolan",
+            gender: "Male",
+            age: 31,
+            image: "images/mike.png",
           },
         ],
       };

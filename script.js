@@ -56,9 +56,12 @@ async function fetchData() {
     ) {
       console.warn("Jessica has no blood pressure data. Using sample data...");
       jessica.blood_pressure_readings = [
-        { date: "2025-03-01", systolic: 120, diastolic: 80 },
-        { date: "2025-03-02", systolic: 125, diastolic: 82 },
-        { date: "2025-03-03", systolic: 118, diastolic: 79 },
+        { date: "Oct. 2023", systolic: 120, diastolic: 113 },
+        { date: "Nov. 2023", systolic: 119, diastolic: 64 },
+        { date: "Dec. 2023", systolic: 160, diastolic: 105 },
+        { date: "Jan. 2024", systolic: 113, diastolic: 91 },
+        { date: "Feb. 2024", systolic: 145, diastolic: 75 },
+        { date: "Mar. 2024", systolic: 160, diastolic: 78 },
       ]; // Example data
     }
 
@@ -90,21 +93,21 @@ function plotBloodPressureChart(bloodPressureData) {
     datasets: [
       {
         data: bloodPressureData.map((entry) => entry.systolic),
-        borderColor: "red",
+        borderColor: "#C26EB4",
         backgroundColor: "rgba(255, 0, 0, 0.2)",
         borderWidth: 2,
-        pointRadius: 5,
+        pointRadius: 3,
         pointBackgroundColor: "red",
-        tension: 0.3,
+        tension: 0.5,
       },
       {
         data: bloodPressureData.map((entry) => entry.diastolic),
-        borderColor: "blue",
+        borderColor: "#7E6CAB",
         backgroundColor: "rgba(0, 0, 255, 0.2)",
         borderWidth: 2,
-        pointRadius: 5,
+        pointRadius: 3,
         pointBackgroundColor: "blue",
-        tension: 0.3,
+        tension: 0.5,
       },
     ],
   };
@@ -115,22 +118,18 @@ function plotBloodPressureChart(bloodPressureData) {
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      scales: {
-        x: {
-          title: { display: true, text: "Date" },
-          ticks: { autoSkip: true, maxTicksLimit: 6 },
-        },
-        y: {
-          // title: { display: true, text: "Blood Pressure (mmHg)" },
-          min: 70,
-          max: 140,
-          // ticks: { stepSize: 10 },
+      plugins: {
+        legend: {
+          display: false,
         },
       },
-      // plugins: {
-      //   legend: { position: "top" },
-      //   tooltip: { mode: "index", intersect: false },
-      // },
+      scales: {
+        x: {},
+        y: {
+          min: 60,
+          max: 180,
+        },
+      },
     },
   });
 }
