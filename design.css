@@ -108,12 +108,17 @@ button {
 
 .patient-card {
   width: 300px;
+  height: 610px;
   padding: 20px;
   border-radius: 10px;
   background: white;
   box-shadow: #ffffff;
   text-align: center;
 }
+
+/* .margin {
+  margin-bottom: 500px;
+} */
 
 .patient-card img {
   width: 100px;
@@ -173,7 +178,7 @@ ul li {
 }
 
 .plot {
-  height: 300px !important;
+  height: 290px !important;
   background-color: #f4f0fe;
 }
 
@@ -222,6 +227,24 @@ ul li {
   font-weight: bold;
   color: white; /* Adjust to match the purple background */
   z-index: 10; /* Ensures it appears above the graph */
+}
+
+.square1 {
+  background-color: #e0f3fa;
+  border-radius: 12px;
+  opacity: 1;
+}
+
+.square2 {
+  background-color: #ffe6e9;
+  border-radius: 12px;
+  opacity: 1;
+}
+
+.square3 {
+  background-color: #ffe6f1;
+  border-radius: 12px;
+  opacity: 1;
 }
 
 .higher {
