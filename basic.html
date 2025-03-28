@@ -75,7 +75,7 @@
                 <h3 class="fw-bold">Patients</h3>
                 <img src="images/search.svg" alt="Search" />
               </div>
-              <ul id="patientList"></ul>
+              <ul id="patientList" class="list-unstyled"></ul>
             </div>
           </div>
 
@@ -152,7 +152,6 @@
           </div>
 
           <!-- Patient Details -->
-
           <div class="col-md-3 col-lg-3 col-sm-12">
             <div class="patient-card ms-auto">
               <div id="patient-data">
@@ -165,6 +164,27 @@
     </section>
     <!-- HERO SECTION ENDS -->
 
+    <!-- DIAGNOSTIC STARTS -->
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- 2ND PATIENT LIST STARTS -->
+          <div class="col-md-3 col-lg-3 col-sm-12">
+            <div class="contain">
+              <ul id="patientLists" class="list-unstyled"></ul>
+            </div>
+          </div>
+
+          <!-- DIAGNOSIS TABLE STARTS -->
+          <div class="col-md-6 col-sm-12 col-lg-6 patient-card2">
+            <h3 class="fw-bold">Diagnosis List</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- DIAGNOSTIC ENDS -->
+
+    <!-- 1ST PATIENT LIST STARTS -->
     <script>
       const patientData = {
         patients: [
@@ -217,6 +237,51 @@
             age: 32,
             image: "images/olivia.png",
           },
+        ],
+      };
+
+      function renderPatientList() {
+        const patientList = document.getElementById("patientList");
+        patientList.innerHTML = "";
+
+        patientData.patients.forEach((patient) => {
+          const listItem = document.createElement("li");
+          listItem.className =
+            "patient-item d-flex align-items-center justify-content-between p-2 border-bottom";
+          if (patient.name === "Jessica Taylor") {
+            listItem.classList.add("active");
+          }
+          listItem.innerHTML = `
+            <div class="d-flex align-items-center">
+              <div class="patient-image me-2">
+                <img src="${patient.image}" alt="${patient.name}">
+                </div>
+                <div class="patient-info">
+                  <div class="patient-name fw-bold">${patient.name}</div>
+                  <div class="patient-details text-muted">${patient.gender}, ${patient.age}</div>
+                  </div>
+                  </div>
+                  <p class="onLick"(${patient.id})">
+                    ...
+                    </p>
+                    `;
+
+          patientList.appendChild(listItem);
+        });
+      }
+
+      function handleOptions(id) {
+        alert("Options for patient ID: " + id);
+      }
+
+      document.addEventListener("DOMContentLoaded", renderPatientList);
+    </script>
+    <!-- 1ST PATIENT LIST STARTS -->
+
+    <!-- 2ND PATIENT LIST JAVASCRIPT STARTS -->
+    <script>
+      const patientDatas = {
+        patients: [
           {
             id: 8,
             name: "Tyler Davis",
@@ -255,27 +320,40 @@
         ],
       };
 
-      function renderPatientList() {
-        const patientList = document.getElementById("patientList");
-        patientList.innerHTML = "";
+      function renderPatientLists() {
+        const patientLists = document.getElementById("patientLists");
+        patientLists.innerHTML = "";
 
-        patientData.patients.forEach((patient) => {
+        patientDatas.patients.forEach((patient) => {
           const listItem = document.createElement("li");
-          listItem.className = "patient-item";
+          listItem.className =
+            "patient-item d-flex align-items-center justify-content-between p-2 border-bottom";
           listItem.innerHTML = `
-            <div class="patient-image">
-              <img src="${patient.image}" alt="${patient.name}">
+      <div class="d-flex align-items-center">
+        <div class="patient-image me-2">
+          <img src="${patient.image}" alt="${patient.name}">
+          </div>
+          <div class="patient-info">
+            <div class="patient-name fw-bold">${patient.name}</div>
+            <div class="patient-details text-muted">${patient.gender}, ${patient.age}</div>
             </div>
-            <div class="patient-info">
-              <div class="patient-name">${patient.name}</div>
-              <div class="patient-details">${patient.gender}, ${patient.age}</div>
-            </div>`;
-          patientList.appendChild(listItem);
+            </div>
+            <p class="onLick"(${patient.id})">
+              ...
+              </p>
+              `;
+
+          patientLists.appendChild(listItem);
         });
       }
 
-      document.addEventListener("DOMContentLoaded", renderPatientList);
+      function handleOptions(id) {
+        alert("Options for patient ID: " + id);
+      }
+
+      document.addEventListener("DOMContentLoaded", renderPatientLists);
     </script>
+    <!-- 2ND PATIENT LIST JAVASCRIPT STARTS -->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

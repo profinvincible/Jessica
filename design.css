@@ -116,6 +116,28 @@ button {
   text-align: center;
 }
 
+.patient-card1 {
+  width: 290px;
+  height: 580px;
+  padding: 20px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: #ffffff;
+}
+
+.patient-card2 {
+  width: 100px;
+  height: 350px;
+  padding: 20px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: #ffffff;
+}
+
+.onLick {
+  color: #072635 !important;
+}
+
 /* .margin {
   margin-bottom: 500px;
 } */
@@ -166,10 +188,27 @@ ul li {
   margin: 0 auto;
   padding: 20px;
   background: white;
-  /* box-shadow: #ffffff; */
+  box-shadow: #ffffff;
   border-radius: 10px;
   width: 100%;
   box-sizing: border-box;
+}
+
+.patient-section {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* .patient-item {
+  cursor: pointer;
+}
+
+.patient-item:hover {
+  background-color: #f8f9fa;
+} */
+
+.patient-item.active {
+  background-color: #d8fcf7;
 }
 
 .plotBloodPressureChart {
