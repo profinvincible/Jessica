@@ -116,6 +116,85 @@ button {
   text-align: center;
 }
 
+.patient-card4 {
+  width: 250px;
+  height: 610px;
+  padding: 20px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: #ffffff;
+  text-align: center;
+}
+
+.patient-card5 {
+  width: 300px;
+  height: 400px;
+  padding: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: none;
+  border-radius: 10px;
+  background: white;
+  box-shadow: #ffffff;
+  text-align: center;
+}
+
+.patient-card3 {
+  width: 100px;
+  height: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  background: white;
+  box-shadow: #ffffff;
+}
+
+.lab-results {
+  background: white;
+  padding: 40px;
+  /* border-radius: 24px; */
+  max-width: 800px;
+  margin: auto;
+}
+
+.lab-header {
+  background: #eef1f6;
+  border-radius: 16px;
+}
+
+.lab-header th {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.table tbody td {
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Status Colors */
+.status {
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.status.normal {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.warning {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.danger {
+  background: #f8d7da;
+  color: #721c24;
+}
+
 .patient-card1 {
   width: 290px;
   height: 370px;
@@ -365,4 +444,30 @@ li {
 .patient-details {
   font-size: 14px;
   color: #888;
+}
+
+/* .diagnosticContainer {
+  background: #f6f7f8;
+  padding: 40px;
+  border-radius: 24px !;
+  max-width: 800px;
+  margin: auto;
+} */
+
+thead {
+  background: #f6f7f8;
+}
+
+thead tr {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+/* Apply border-radius only to the top corners */
+thead tr:first-child th:first-child {
+  border-top-left-radius: 24px;
+}
+
+thead tr:first-child th:last-child {
+  border-top-right-radius: 24px;
 }
